@@ -23,32 +23,31 @@
         $publish_date = $_POST["publish_date"];
         $status = $_POST["status"];
 
-               
         if($_FILES["image"]["error"] == 0){
             if($row["image"] != "default.png"){
                 unlink("pictures/$row[image]"); 
                 }
             $sql = "update `biglibrary` 
-                            set title = '$title', $image = '$image[0]', isbn_code = '$isbn_code', short_description = '$short_description', type ='$type',
-                                        author_first_name='$author_first_name', author_last_name ='$author_last_name', publisher_name='$publisher_name', 
-                                        publisher_address='$publisher_address', publish_date='$publish_date', status='$status' where bookid=$bookid";
+                            set title = '$title', image = '$image[0]', isbn_code = '$isbn_code', short_description = '$short_description', type ='$type',
+                                author_first_name='$author_first_name', author_last_name ='$author_last_name', publisher_name='$publisher_name', 
+                                publisher_address='$publisher_address', publish_date='$publish_date', status='$status' where bookid=$bookid";
             } else {
             $sql = "update `biglibrary` 
                             set title = '$title', isbn_code = '$isbn_code', short_description = '$short_description', type ='$type',
-                                        author_first_name='$author_first_name', author_last_name ='$author_last_name', publisher_name='$publisher_name', 
-                                        publisher_address='$publisher_address', publish_date='$publish_date', status='$status' where bookid=$bookid";
+                                author_first_name='$author_first_name', author_last_name ='$author_last_name', publisher_name='$publisher_name', 
+                                publisher_address='$publisher_address', publish_date='$publish_date', status='$status' where bookid=$bookid";
             }
             if(mysqli_query($connect, $sql)){
                 echo "
                 <div class='alert alert-success' role='alert'>
-                    All good.
+                    Update successful.
                 </div>
                 ";
             }
             else{
                 echo "
                 <div class='alert alert-danger' role='alert'>
-                    Somethings wrong.
+                    Something went wrong.
                 </div>
                 ";
             }
