@@ -1,0 +1,35 @@
+
+-- table biglibrary
+--
+-- consists of:
+--
+-- bookid, title, image, isbn_code, short_description, type, author_first_name, author_last_name, publisher_name, publisher_address, publish_date
+--
+-- create table `biglibrary` (
+--     `bookid` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     `title` VARCHAR(255) NOT NULL,
+--     `image` VARCHAR(255) NOT NULL,
+--     `isbn_code` VARCHAR(255) NOT NULL,
+--     `short_description` VARCHAR(255) NOT NULL,
+--     `type` VARCHAR(255) NOT NULL,
+--     `author_first_name` VARCHAR(255) NOT NULL,
+--     `author_last_name` VARCHAR(255) NOT NULL,
+--     `publisher_name` VARCHAR(255) NOT NULL,
+--     `publisher_address` VARCHAR(255) NOT NULL,
+--     `publish_date` date,
+--     `status` VARCHAR(255) NOT NULL);
+
+
+-- INSERT INTO `biglibrary` (
+--     `title`, `image`, `isbn_code`, `short_description`, `type`, `author_first_name`, `author_last_name`, `publisher_name`, `publisher_address`, `publish_date`, `status`) 
+-- VALUES
+--     ("War and Peace", "default.png", "A-0010-Z", "War and Peace broadly focuses on Napoleon’s invasion of Russia in 1812", "Book", "Leo", "Tolstoy", "Penguin", "Street City", "1990-01-12", "available"),
+--     ("Anna Karenina", "default.png", "A-0013-Z", "Anna Karenina, a married socialite, and her affair with the affluent Count Vronsky", "Book", "Leo", "Tolstoy", "Penguin", "Street City", "1993-01-15", "available"),
+--     ("Ressurection", "default.png", "A-0016-Z", "The story is about a nobleman named Dmitri Ivanovich Nekhlyudov", "Book", "Leo", "Tolstoy", "Penguin", "Street City", "1996-04-18", "reserved"),
+--     ("Haru To Shura", "default.png", "A-0011-Z", "Haru Nemuri's first album", "CD", "Haru", "Nemuri", "TO3S", "Street City", "1991-11-13", "available"),
+--     ("Shunka Ryougen", "default.png", "A-0014-Z", "Haru Nemuri's second album", "CD", "Haru", "Nemuri", "TO3S", "Street City", "1994-02-16", "reserved"),
+--     ("Diana Ross", "default.png", "A-0017-Z", "Her first album", "CD", "Diana", "Ross", "TO3S", "Street City", "1997-05-19", "avaiable"),
+--     ("Ran", "default.png", "A-0012-Z", "Hidetora Ichimonji, a powerful but elderly warlord, decides to divide his kingdom among his three sons", "DVD", "Akira", "Kurosawa", "Toho", "Street City", "1992-12-14", "reserved"),
+--     ("Dreams", "default.png", "A-0015-Z", "The film does not have a single narrative, but is rather episodic in nature", "DVD", "Akira", "Kurosawa", "Toho", "Street City", "1995-03-17", "available"),
+--     ("Rhapsody in August", "default.png", "A-0018-Z", "A tale of three generations in a post-war Japanese family", "DVD", "Akira", "Kurosawa", "Toho", "Street City", "1998-06-20", "reserved"),
+--     ("King Lear", "default.png", "A-0019-Z", "King Lear of Britain, elderly and wanting to retire from the duties of the monarchy, decides to divide his realm among his three daughters", "Book", "Wiliam", "Shakespeare", "Banana", "Street City", "1999-07-21", "reserved");
