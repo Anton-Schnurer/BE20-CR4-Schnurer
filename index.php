@@ -19,7 +19,7 @@
                         <a href='publisher.php?publisher_name=$row[publisher_name]' class='btn btn-primary'>$row[publisher_name]</a>
                         <p class='card-text'>$row[short_description].</p>
                         <a href='details.php?bookid=$row[bookid]' class='btn btn-primary'>Details</a>
-                        <a href='update.php?bookid=$row[bookid]' class='btn btn-warning'>Update</a>
+                        <a href='update.php?bookid=$row[bookid]' class='btn btn-warning'>Edit</a>
                         <a href='delete.php?bookid=$row[bookid]' class='btn btn-danger'>Delete</a>
                     </div>
                 </div>

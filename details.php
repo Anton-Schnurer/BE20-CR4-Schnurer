@@ -26,7 +26,7 @@
                         <p class='card-text'><u>Status:</u> {$row[0]["status"]}</p>
                         <p class='card-text'><details>
                          <summary>Details</summary>{$row[0]["short_description"]}</details></p>
-                        <a href='update.php?bookid={$row[0]["bookid"]}' class='btn btn-warning'>Update</a>
+                        <a href='update.php?bookid={$row[0]["bookid"]}' class='btn btn-warning'>Edit</a>
                         <a href='delete.php?bookid={$row[0]["bookid"]}' class='btn btn-danger'>Delete</a>
                     </div>
                 </div>
