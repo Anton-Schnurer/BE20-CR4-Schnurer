@@ -16,16 +16,13 @@
         $publish_date = $_POST["publish_date"];
         $status = $_POST["status"];
 
+        // read out the content of the POST variable that has been filled below via the input form
+        // atm there is no validation of the inputs since it was not requested in the code review
+
         $sql = "INSERT INTO `biglibrary` (`title`, `image`, `isbn_code`, `short_description`, `type`, `author_first_name`, `author_last_name`,
                                          `publisher_name`, `publisher_address`, `publish_date`, `status`) 
                 VALUES ('$title', '$image[0]', '$isbn_code', '$short_description', '$type', '$author_first_name', '$author_last_name',
                          '$publisher_name', '$publisher_address', '$publish_date', '$status')";
-
-
-
-// echo $sql;
-// exit();
-
 
 
         if(mysqli_query($connect, $sql)){

@@ -7,6 +7,9 @@
         $sql = "SELECT * FROM biglibrary WHERE bookid = $bookid"; 
         $result = mysqli_query($connect, $sql);
         $row = mysqli_fetch_assoc($result);
+        
+        // remove picture if it isn't the default one before deleting the record
+        
         if($row["image"] != "default.png"){ 
             unlink("pictures/$row[image]");
         }

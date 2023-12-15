@@ -3,12 +3,16 @@
     require_once 'includes/db_connect.php';
     require_once 'includes/navbar.php';
 
+    // this page is being called via GET which will contain the bookid for which all the details have to be shown
+
     if(isset($_GET["bookid"]) && !empty($_GET["bookid"])) {
         $sqlSid = "SELECT * FROM `biglibrary` where bookid=$_GET[bookid]";
         $result = mysqli_query($connect, $sqlSid);
 
         $cards = "";
 
+        // will fetch just one record
+        
         if(mysqli_num_rows($result) > 0){
             $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
             $cards .= "

@@ -2,7 +2,8 @@
     require_once 'includes/db_connect.php';
     require_once 'includes/fileUpload.php';
 
-
+    // update form is prefilled with current content from the database
+    
     $bookid = $_GET["bookid"];
     $sql = "SELECT * from biglibrary where bookid = $bookid";
     $result = mysqli_query($connect, $sql);

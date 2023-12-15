@@ -9,6 +9,7 @@
 
     if(mysqli_num_rows($result) > 0){
         while($row = mysqli_fetch_assoc($result)){
+            // fill out the html output for each entry in the table
             $cards .= "
             <div class='p-2'>
                 <div class='card'>
